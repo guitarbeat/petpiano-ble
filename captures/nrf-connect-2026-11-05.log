@@ -1,0 +1,17 @@
+[23:31:41.414] Normal: Scanner On.
+[23:31:41.456] Normal: Device Scanned.
+[23:31:45.748] Normal: Connected.
+[23:31:46.039] Normal: Discovered Alert Notification Service and 60462F12-9543-9999-12C8-58B459A2712D Services.
+[23:31:46.081] Normal: Service Discovery returned nil Services.
+[23:31:46.128] Normal: Discovered Supported New Alert Category, New Alert, Supported Unread Alert Category, Unread Alert Status, and Alert Notification Control Point Characteristics for Service Alert Notification Service.
+[23:31:46.170] Normal: Service Discovery returned nil Services.
+[23:31:46.263] Normal: Discovered 34333333-2222-2222-1111-111100000000, 35333333-2222-2222-1111-111100000000, 36333333-2222-2222-1111-111100000000, and 37333333-2222-2222-1111-111100000000 Characteristics for Service 60462F12-9543-9999-12C8-58B459A2712D.
+[23:31:46.264] Normal: Supported New Alert Category has no Descriptors.
+[23:31:46.305] Normal: Discovered Client Characteristic Configuration Descriptors for Characteristic New Alert
+[23:31:46.305] Normal: Supported Unread Alert Category has no Descriptors.
+[23:31:46.351] Normal: Discovered Client Characteristic Configuration Descriptors for Characteristic Unread Alert Status
+[23:31:46.351] Normal: Alert Notification Control Point has no Descriptors.
+[23:31:46.352] Normal: 34333333-2222-2222-1111-111100000000 has no Descriptors.
+[23:31:46.352] Normal: 35333333-2222-2222-1111-111100000000 has no Descriptors.
+[23:31:46.353] Normal: 36333333-2222-2222-1111-111100000000 has no Descriptors.
+[23:31:46.396] Normal: 37333333-2222-2222-1111-111100000000 has no Descriptors.
