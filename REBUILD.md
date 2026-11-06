@@ -34,13 +34,20 @@ as every change.
 3. To keep exploring: force close Purrfect Pitch, connect to `PetPiano`
    in nRF Connect, follow the capture steps in `PROTOCOL.md`, and add new
    logs under `captures/`.
-4. To publish updates: edit the text files locally, then push with the
-   GitHub `push-files` flow (text only, max 16 MiB, max 2000 files).
-   Binary files cannot be pushed with this tooling; document them in
+4. To publish updates: edit the text files locally, then `git push` from
+   this folder (see the push note below). Binary files cannot be pushed
+   with the GitHub tooling used here; document them in
    `hardware/manifest.md` instead.
 
 ## Decision log
 
+- 2026-11-06: Push route is plain `git push` using the already
+  authenticated `gh` CLI (account guitarbeat). The Muse GitHub App
+  integration cannot write to this repo: `create_repository` and
+  `push_files` both fail with 403 "Resource not accessible by
+  integration". The repo itself was also created with `gh repo create`
+  for the same reason. If the App installation is ever widened to cover
+  this repo, the `push_files` flow can be used instead.
 - 2026-11-06: Repo created public as `guitarbeat/petpiano-ble`. Public
   was Aaron's choice; the point is to be the first public protocol map
   for this device.
