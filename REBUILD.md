@@ -9,9 +9,8 @@ as every change.
 - `PROTOCOL.md` - BLE protocol findings and unknowns.
 - `hardware/BOM.md` - parts lists from the open hardware package.
 - `hardware/manifest.md` - original binary packages, hashes, provenance.
-- `hardware/originals/` - local-only copies of the original binary
-  packages. NOT pushed to GitHub (binary files cannot go through the
-  GitHub tooling used here).
+- `hardware/originals/` - the original binary packages (Gerbers, 3D
+  models, BOM PDFs), tracked in git.
 - `captures/` - raw BLE session logs.
 - `LICENSE` - MIT.
 
@@ -34,13 +33,17 @@ as every change.
 3. To keep exploring: force close Purrfect Pitch, connect to `PetPiano`
    in nRF Connect, follow the capture steps in `PROTOCOL.md`, and add new
    logs under `captures/`.
-4. To publish updates: edit the text files locally, then `git push` from
-   this folder (see the push note below). Binary files cannot be pushed
-   with the GitHub tooling used here; document them in
-   `hardware/manifest.md` instead.
+4. To publish updates: edit the files locally, then `git push` from
+   this folder (see the push note below). Plain git handles binary
+   files fine; only the GitHub `push_files` tool is text-only.
 
 ## Decision log
 
+- 2026-11-06: Binary packages are now IN the repo
+  (`hardware/originals/`, commit e6db273), pushed with plain git. The
+  earlier "binaries cannot be pushed" note was wrong in scope: only the
+  GitHub `push_files` tool is text-only. Plain `git push` handles the
+  9 MB 3D model zip and the rest without issue.
 - 2026-11-06: Push route is plain `git push` using the already
   authenticated `gh` CLI (account guitarbeat). The Muse GitHub App
   integration cannot write to this repo: `create_repository` and
@@ -57,6 +60,8 @@ as every change.
   hashes) and the originals are kept in `hardware/originals/` locally.
   If the zips need to be in the repo, upload them through the GitHub web
   UI as a follow-up.
+  - Superseded same day: they were pushed with plain git (commit
+    e6db273). Only `push_files` is text-only, not git.
 - 2026-11-06: MIT license. Standard pick for a findings repo; change it
   if Aaron wants a different license.
 - 2026-11-05: Investigation route chosen is talking to the stock
@@ -86,4 +91,3 @@ is on the `main` branch.
 - Characteristic properties and values are not yet captured.
 - No key-press notification capture yet.
 - No mapping of official-app actions to bytes written.
-- Binary packages are not in the repo (see decision log).

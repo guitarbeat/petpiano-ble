@@ -53,11 +53,11 @@ product came later. The open hardware files are summarized in
 
 ## A note on the binary files
 
-The original Gerber, BOM PDF, and 3D model packages are binary files, and
-the tooling used to publish this repo only pushes text. Their contents are
-preserved here as text (BOM tables, file listings, hashes) in `hardware/`.
-The originals are the free DIY package from Smart Solutions for Home. See
-`hardware/manifest.md` for details.
+The original Gerber, BOM PDF, and 3D model packages live in
+`hardware/originals/`. Their contents are also preserved as text (BOM
+tables, file listings, hashes) in `hardware/`. The originals are the free
+DIY package from Smart Solutions for Home. See `hardware/manifest.md`
+for details.
 
 ## License
 
